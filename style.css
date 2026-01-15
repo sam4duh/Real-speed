@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #f5f1e8;
+    color: #2d2d2d;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.container {
+    text-align: center;
+    padding: 40px;
+}
+
+/* Main speed number */
+.speed-display {
+    margin-bottom: 20px;
+}
+
+.speed-number {
+    font-size: 120px;
+    font-weight: 300;
+    line-height: 1;
+    color: #3a3226;
+}
+
+.speed-unit {
+    font-size: 32px;
+    font-weight: 300;
+    color: #8b7f6f;
+    margin-top: 10px;
+}
+
+/* Status text */
+.status {
+    font-size: 20px;
+    color: #8b7f6f;
+    margin: 30px 0;
+}
+
+/* Additional metrics */
+.metrics {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    margin-top: 40px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.metrics.show {
+    opacity: 1;
+}
+
+.metric {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.metric-label {
+    font-size: 14px;
+    color: #8b7f6f;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.metric-value {
+    font-size: 24px;
+    color: #3a3226;
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 253, 247, 0.8);
+    padding: 10px 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.github-icon {
+    width: 20px;
+    height: 20px;
+    opacity: 0.6;
+}
+
+.github-link {
+    font-size: 13px;
+    color: #8b7f6f;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.github-link:hover {
+    color: #3a3226;
+}
+
+.footer-divider {
+    font-size: 13px;
+    color: #8b7f6f;
+    opacity: 0.5;
+}
+
+.footer-text {
+    font-size: 13px;
+    color: #8b7f6f;
+}
+
+/* Loading animation */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+.loading {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Mobile footer fix – no other changes */
+@media (max-width: 480px) {
+    .footer {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+        padding: 8px 14px;
+        bottom: 12px;
+    }
+
+    .footer-divider {
+        display: none;
+    }
+
+    .github-link,
+    .footer-text {
+        font-size: 12px;
+        text-align: center;
+    }
+}

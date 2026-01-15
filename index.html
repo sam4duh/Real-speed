@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Main speed display -->
+        <div class="speed-display" id="speedDisplay">
+            <div class="speed-number" id="speedNumber">--</div>
+            <div class="speed-unit">MB/s</div>
+        </div>
+        <!-- Status text -->
+        <div class="status" id="status">Click to start</div>
+        <!-- Additional metrics -->
+        <div class="metrics" id="metrics">
+            <div class="metric">
+                <span class="metric-label">Ping</span>
+                <span class="metric-value" id="ping">-- ms</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">Upload</span>
+                <span class="metric-value" id="upload">-- MB/s</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <img src="https://www.svgrepo.com/show/448447/github.svg" alt="GitHub" class="github-icon">
+        <a href="https://github.com/sam4duh/Real-speed" class="github-link" target="blank">View on GitHub</a>
+        <div class="footer-divider">|</div>
+        <div class="footer-text">
+            Powered by Cloudflare | &copy; sam4duh 2026
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
